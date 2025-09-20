@@ -19,7 +19,7 @@ const ChatsList = () => {
   const navigate = useNavigate();
   useEffect(() => {
     getMyChatPartners();
-  }, [getMyChatPartners]);
+  }, [getMyChatPartners, messages]);
   if (isUsersLoading) return <UsersLoadingSkeleton />;
   if (chats?.length === 0)
     return "Choose a contact from above tab to start a chatting";
